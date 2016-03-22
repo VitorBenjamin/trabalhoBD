@@ -1,5 +1,5 @@
-<?php 
-	
+<?php
+
 	$nome = $_POST["nome"];
 	$sobrenome = $_POST["sobrenome"];
 	$matricula = $_POST["matricula"];
@@ -9,16 +9,14 @@
 	require_once('connection.php');
 
 	$conn = Connection::getConexao();
-	$stmt = $conn->prepare('INSERT INTO usuario(nome, sobrenome, matricula, email, senha) 
+	$stmt = $conn->prepare('INSERT INTO usuario(nome, sobrenome, matricula, email, senha)
 		VALUES(:nome, :sobrenome, :matricula, :email, :password)');
-	$stmt->execute(array( 
+	$stmt->execute(array(
 		':nome' => $nome,
 		':sobrenome' => $sobrenome,
 		':matricula'=> $matricula,
 		':email'=> $email,
 		':password'=> $password
 		));
-	echo $stmt->rowCount(); 
-	
+	echo $stmt->rowCount();
 ?>
-		
