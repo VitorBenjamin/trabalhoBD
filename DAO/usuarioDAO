@@ -1,3 +1,6 @@
+
+require_once 'conexaoPDO.php';
+
 Class UsuarioDao{
 
 	public function inserir($query, $lista){
@@ -9,12 +12,26 @@ Class UsuarioDao{
 
 	}
 	public function atualizar(){
+	
+		$conn = Connection::getConexao();
+		$stmt = $conn->prepare($query);
+		$stmt->execute($lista);
+		echo $stmt->rowCount();
 
 	}
 	public function consultar(){
+	
+		$conn = Connection::getConexao();
+		$stmt = $conn->prepare($query);
+		$stmt->execute($lista);
+		echo $stmt->rowCount();
 
 	}
 	public function deletar(){
-
+	
+		$conn = Connection::getConexao();
+		$stmt = $conn->prepare($query);
+		$stmt->execute($lista);
+		echo $stmt->rowCount();
 	}
 }
