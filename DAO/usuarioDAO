@@ -1,1 +1,20 @@
+Class UsuarioDao{
 
+	public function inserir($query, $lista){
+
+		$conn = Connection::getConexao();
+		$stmt = $conn->prepare($query);
+		$stmt->execute($lista);
+		echo $stmt->rowCount();
+
+	}
+	public function atualizar(){
+
+	}
+	public function consultar(){
+
+	}
+	public function deletar(){
+
+	}
+}
