@@ -1,9 +1,33 @@
-
 require_once '../querys/conexaoPDO.php';
+
+new UsuarioDao();
 
 Class UsuarioDao{
 
-	public function inserir($query, $lista){
+	private $cadastre;
+	private $update;
+	private $delete;
+	private $selection;
+
+	public function __construct() {
+	
+	        $action = $_POST['action'];
+	        if ($action == "insert") {
+	            $this->cadastre = new Music();
+	            $this->insert();
+	        } elseif ($action == "update") {
+	            $this->update = new Music();
+	            $this->update();
+	        } elseif ($action == "delete") {
+	            $this->delete = new Music();
+	            $this->delete();
+	        } elseif ($action == "select") {
+	            $this->selection = new Music();
+	            $this->select();
+	        }
+	    }
+
+	public function insert($query, $lista){
 
 		$conn = Conexao::getConexao();
 		$stmt = $conn->prepare($query);
