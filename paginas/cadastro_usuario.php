@@ -1,4 +1,3 @@
-
 <div class="section no-pad-bot" id="index-banner">
   <div class="container">
     <br><br>
@@ -10,31 +9,29 @@
 
   </div>
 </div>
-
-
 <div class="container">
   <div class="section" id="cadastro_fisico">
 
     <!--   Icon Section   -->
     <div class="row">
-      <form method="POST" action="cadatrar_banco.php" class="col s12">
+      <form method="POST" action="../trabalhoBD/DAO/usuarioDao.php" class="col s12">
         <div class="row">
           <div class="input-field col s6">
-            <input id="nome" type="text" class="validate">
+            <input id="nome" type="text" class="validate" name="nome">
             <label for="Nome">Nome</label>
           </div>
           <div class="input-field col s6">
-            <input id="sobrenome" type="text" class="validate">
+            <input id="sobrenome" type="text" class="validate" name="sobrenome">
             <label for="Sobrenome">Sobrenome</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
-            <input id="matricula" type="number" class="validate">
+            <input id="matricula" type="number" class="validate" name="matricula">
             <label for="Matricula">Matricula</label>
           </div>
           <div class="input-field col s6">
-            <input id="email" type="email" class="validate">
+            <input id="email" type="email" class="validate" name="email">
             <label for="Email">Email</label>
           </div>
         </div>
@@ -48,17 +45,17 @@
             </select>
           </div>
           <div class="input-field col s6">
-            <input id="password" type="password" class="validate">
+            <input id="password" type="password" class="validate" name="password">
             <label for="password">Password</label>
           </div>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar
+        <button class="btn waves-effect waves-light" type="submit" name="inserir">Cadastrar
           <i class="material-icons right">send</i>
         </button>
-
       </form>
     </div>
   </div>
 </div>
+
 
