@@ -18,19 +18,20 @@ new UsuarioDao();
                     break;
 
                 case 'consultar':
-                    $this -> inserir();
+                    $this -> consultar();
                     break;
 
                 case 'deletar':
-                    $this -> inserir();
+                    $this -> deletar();
                     break;
 
                 default:
-                    $this -> deletar();
+                echo "string";
+                   break;
             }	
 		}
 
-		public function insert()
+		public function inserir()
 		{
 			$nome = $_POST["nome"];
 			$sobrenome = $_POST["sobrenome"];
@@ -53,7 +54,7 @@ new UsuarioDao();
 		public function atualizar()
 		{
 			try { 
-				$conn = Connection::getConexao();
+				$conn = Conexao::getConexao();
 				$stmt = $conn->prepare('UPDATE minhaTabela SET nome = :nome WHERE id = :id');
 				$stmt->execute(array( ':id' => $id, ':nome' => $nome ));
 				echo $stmt->rowCount();
@@ -64,7 +65,7 @@ new UsuarioDao();
 		}
 		public function consultar()
 		{
-			$conn = Connection::getConexao();
+			$conn = Conexao::getConexao();
 			$stmt = $conn->prepare($query);
 			$stmt->execute($lista);
 			echo $stmt->rowCount();
@@ -73,7 +74,7 @@ new UsuarioDao();
 		{
 			$nome = $_POST["id"];
 			try { 
-				$conn = Connection::getConexao();
+				$conn = Conexao::getConexao();
 				$stmt = $conn->prepare('DELETE FROM usuario WHERE id = :id');
 				$stmt->bindParam(':id', $id);
 				$stmt->execute();
@@ -82,10 +83,6 @@ new UsuarioDao();
 			} catch(PDOException $e) {
 			 echo 'Error: ' . $e->getMessage(); 
 			}
-			$conn = Connection::getConexao();
-			$stmt = $conn->prepare($query);
-			$stmt->execute($lista);
-			echo $stmt->rowCount();
 		}
 		public function get_post_action($name)
 		{    
