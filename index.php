@@ -9,6 +9,22 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script>
+
+
+    function alterar_div() {
+      $.ajax({
+        type: "POST",
+        url: "ControleUser.php",
+        data: {
+          nome_usuario: $('#seu_nome').val()
+        },
+        success: function(data) {
+          $('#conteudo').html(data);
+        }
+      });
+    }
+  </script>
 </head>
 <body>
   <div class="navbar-fixed">
@@ -25,6 +41,7 @@
           <li><a href="?p=cadastro_setor">Setor</a></li>
           <li><a href="?p=cadastro_item">Itens</a></li>
           <li><a href="?p=formulario">Formulario</a></li>
+          <li><a href="?p=alter_usuario">Alterar Usuario</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
@@ -77,10 +94,10 @@
 
 
   <!--  Scripts-->
-</script>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
 </body>
 </html>

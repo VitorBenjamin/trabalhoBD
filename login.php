@@ -45,17 +45,17 @@
             </div>
           </div>
           <br><br>
-
         </div>
       </div>
-      <div class="parallax"><img src="img/VgPwabX.jpg" height="1938" width="2790" alt="Unsplashed background img 1"></div>
+      <div class="parallax"><img src="img/VgPwabX.jpg" height="1938" width="2790" alt="Unsplashed background img 1">
+      </div>
+
     </div>
   </div>
 
 
   <div class="container">
     <div class="section">
-
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12 m4">
@@ -85,7 +85,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -105,28 +104,29 @@
       </div>
     </div>
 
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Informaçoes Profissionais</h5>
-          <p class="grey-text text-lighten-4">Somos uma equipe de estudantes universitários que trabalham neste projeto como se fosse o nosso trabalho. Projeto que seja apresentado a materia de Banco de Dados e Analise Projeto de Sistemas</p>
 
+    <footer class="page-footer teal">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Informaçoes Profissionais</h5>
+            <p class="grey-text text-lighten-4">Somos uma equipe de estudantes universitários que trabalham neste projeto como se fosse o nosso trabalho. Projeto que seja apresentado a materia de Banco de Dados e Analise Projeto de Sistemas</p>
+
+          </div>
         </div>
       </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        Made by <a class="brown-text text-lighten-3">Vitor Benjamin / Anderson</a>
+      <div class="footer-copyright">
+        <div class="container">
+          Made by <a class="brown-text text-lighten-3">Vitor Benjamin / Anderson</a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
 
-</body>
-</html>
+  </body>
+  </html>

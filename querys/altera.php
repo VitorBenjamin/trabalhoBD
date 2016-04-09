@@ -1,12 +1,10 @@
-﻿<?php 
+﻿<?php
  $id = $_GET['id'];
  include("conexao.php");
- 
  $result = mysql_query("SELECT * FROM cadastro WHERE id_cad='$id'");
- 
 ?>
 
-<form name="form" action="update.php" method="post"> 
+<form name="form" action="update.php" method="post">
 
 <?php while($row = mysql_fetch_array($result)){ ?>
 <input type="text" name="id" value=" <?= $row["id_cad"]; ?>" /><br />

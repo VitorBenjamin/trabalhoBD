@@ -1,35 +1,11 @@
-require_once '../querys/conexaoPDO.php';
 
-new UsuarioDao();
+require_once 'conexaoPDO.php';
 
 Class UsuarioDao{
 
-	private $cadastre;
-	private $update;
-	private $delete;
-	private $selection;
+	public function inserir($query, $lista){
 
-	public function __construct() {
-	
-	        $action = $_POST['action'];
-	        if ($action == "insert") {
-	            $this->cadastre = new Music();
-	            $this->insert();
-	        } elseif ($action == "update") {
-	            $this->update = new Music();
-	            $this->update();
-	        } elseif ($action == "delete") {
-	            $this->delete = new Music();
-	            $this->delete();
-	        } elseif ($action == "select") {
-	            $this->selection = new Music();
-	            $this->select();
-	        }
-	    }
-
-	public function insert($query, $lista){
-
-		$conn = Conexao::getConexao();
+		$conn = Connection::getConexao();
 		$stmt = $conn->prepare($query);
 		$stmt->execute($lista);
 		echo $stmt->rowCount();

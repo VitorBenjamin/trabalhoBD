@@ -17,7 +17,7 @@
 
     <!--   Icon Section   -->
     <div class="row">
-      <form method="POST" action="cadatrar_banco.php" class="col s12">
+      <form method="POST" action="ControleUser.php" class="col s12">
         <div class="row">
           <div class="input-field col s12">
             <textarea id="textarea1" class="materialize-textarea" length="120"></textarea>
@@ -57,7 +57,7 @@
                 </div>
               </form>
               <div class="modal-footer">
-                <button class="modal-action modal-close waves-effect waves-green btn-flat btn waves-effect waves-light" type="submit" name="action">Cadastrar
+                <button class="modal-action modal-close waves-effect waves-green btn-flat btn waves-effect waves-light" type="submit" name="form">Cadastrar
                   <i class="material-icons right">send</i>
                 </button>
               </div>
